@@ -1,5 +1,5 @@
 from clearml import PipelineDecorator
-from pipelines.pipeline_test import step_1, step_2, step_3
+from time import sleep
 
 
 @PipelineDecorator.pipeline(
@@ -11,11 +11,11 @@ from pipelines.pipeline_test import step_1, step_2, step_3
 )
 def main():
     print("Starting pipeline")
-    step_1.step_one()
+    sleep(1)
     print("Finished step_1")
-    step_2.step_two()
+    sleep(1)
     print("Finished step_2")
-    step_3.step_three()
+    sleep(1)
     print("Finished step_3")
 
 
